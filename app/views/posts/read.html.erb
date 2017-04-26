@@ -4,9 +4,12 @@
 
     <div class="pin">
       <p>
-				<%= element[1]["name"].to_str %>
+			 <b> <%= element[1]["name"].to_str %> </b>	
 			</p>
-			<img src="/images/<%= element[1]["fileName"] %>" />
+      <% if element[1]["fileName"] != nil %>
+          <img src="/images/<%= element[1]["fileName"] %>" />
+      <% end %>
+
 			<p>
 				<%= element[1]["fullText"].to_str %>
 			</p>
