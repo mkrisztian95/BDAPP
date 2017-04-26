@@ -16,7 +16,7 @@ class CreateController < ApplicationController
     uploader = AvatarUploader.new
     if params[:pic] != nil
     file = params[:pic].tempfile
-    fileName = Date.new(2009,11,26).to_time.to_i.to_s + ".jpg"
+    fileName = Date.new().to_time.to_i.to_s + ".jpg"
     # uploader.store!(file)
     File.open(Rails.root.join('public', 'images', fileName.to_s), 'wb') do |f|
       f.write(file.read)

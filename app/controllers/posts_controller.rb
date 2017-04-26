@@ -6,6 +6,10 @@ class PostsController < ApplicationController
     firebase = Firebase::Client.new(base_uri)
 
     @response = firebase.get("posts", {})
-    @array = @response.body
+    @array = []
+    if @response.success?
+      @array = @response.body
+    end
+
   end
 end
