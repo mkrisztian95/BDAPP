@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'posts/read'
+  get "ittameglepid" => 'posts#read' 
 
-  get 'create/createPost'
+  get "lepdmegRitat" => 'create#createPost'
 
   post "/bestWishesForRita" => "create#savePost", :as => :create_post
   get "/bestWishesForRita" => "create#savePost" #, :as => :create_post

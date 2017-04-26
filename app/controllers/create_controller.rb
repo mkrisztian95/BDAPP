@@ -20,6 +20,7 @@ class CreateController < ApplicationController
     File.open(Rails.root.join('public', 'images', fileName.to_s), 'wb') do |f|
       f.write(file.read)
     end
+    
     base_uri = 'https://uzhgoroddevgroup.firebaseio.com/'
 
     firebase = Firebase::Client.new(base_uri)
